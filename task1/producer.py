@@ -23,7 +23,8 @@ if __name__ == '__main__':
         if err is not None:
             print('Message delivery failed: {}'.format(err))
         else:
-            print('Message delivered to {}'.format(msg.topic()))
+            print('Message delivered to {}: value = {}'.format(
+                msg.topic(), msg.value().decode('utf-8')))
 
     for data in range(20):
         # Trigger any available delivery report callbacks from previous produce() calls
