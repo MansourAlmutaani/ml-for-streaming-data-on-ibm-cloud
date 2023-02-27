@@ -30,7 +30,7 @@ if __name__ == '__main__':
             print("Consumer error: {}".format(msg.error()))
             continue
 
-        print('Received message: {}'.format(msg.value().decode('utf-8')))
+        print('Received message: value = {}'.format(msg.value().decode('utf-8')))
 
         numlist.append(int(msg.value()))
         if len(numlist) == 5:
